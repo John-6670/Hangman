@@ -11,7 +11,7 @@ def choose_word(field: str):
 
 def show_menu():
     width, height = shutil.get_terminal_size()
-    print("Welcome to Hangman game".center(width))
+    print("Welcome to the Hangman game".center(width))
 
     print('\n' + '-' * width)
     print('What field do you want the selected word to be in?\n')
@@ -49,7 +49,7 @@ for i, field in enumerate(fields):
 show_menu()
 
 while True:
-    choice = int(input('\n>> Choose one of options above: '))
+    choice = int(input('\n>> Choose one of the options above: '))
 
     try:
         chosen_word, attempts = choose_word(fields_dic[choice])
@@ -69,12 +69,12 @@ while attempts > 0 and '_' in word_display:
             if letter == guess:
                 word_display[index] = guess
     else:
-        print(f"{guess} doesn't appear in the word!!!")
+        print(f"'{guess}' doesn't appear in the word!!!")
         attempts -= 1
         
 if '_' not in word_display:
-    print('\nYou guessed the word!')
-    print(chosen_word)
+    print(f'\nCongratulations! You guessed the word: {chosen_word}')
+    print('You win!')
 else:
     print(f'\nYou ran out of attempts. the word was: {chosen_word}')
     print('You lost :(')
