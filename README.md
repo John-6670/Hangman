@@ -21,7 +21,7 @@ This Python-powered Hangman game is here to challenge you and test your word-gue
    - Run out of attempts, resulting in the hidden word being revealed and the hangman meeting his unfortunate fate.
 ## Example Gameplay
 ```
-                                   Welcome to the Hangman game
+                                     Welcome to the Hangman game
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 What field do you want the selected word to be in?
